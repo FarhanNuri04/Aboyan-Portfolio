@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Farhan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Farhan<span>.Dev</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section">
+        <div class="contact-header">
+            <h1 class="section-title">Get In Touch</h1>
+            <p class="contact-desc">Have a question, internship opportunity, or project proposal? Drop me a message below and I'll get back to you as soon as possible.</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- CONTACT FORM -->
+            <div class="contact-form-wrapper">
+                
+                <!-- TUKAR URL_FORMSPREE_KAU DENGAN URL KAU YANG SEBENAR -->
+                <form id="contactForm" class="contact-form" action="https://formspree.io/f/mjywozba" method="POST">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Your email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">Send Message 🚀</button>
+                </form>
+            </div>
+
+            <!-- DIRECT LINKS -->
+            <div class="direct-links">
+                <h2>Contact Information</h2>
+                <p>Feel free to reach out through these channels.</p>
+                
+                <div class="info-item">
+                    <span class="icon">📧</span>
+                    <div>
+                        <strong>Email</strong><br>
+                        <a href="mailto:farhannuri611@gmail.com">farhannuri611@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icon">📱</span>
+                    <div>
+                        <strong>Phone</strong><br>
+                        <a href="tel:+60174786158">+60 17-478 6158</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <span class="icon">📍</span>
+                    <div>
+                        <strong>Location</strong><br>
+                        Seremban, Negeri Sembilan
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KOD JAVASCRIPT UNTUK POPUP ALERT -->
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            // Keluar alert dulu
+            alert('Thank you! Your message has been sent successfully.');
+            // Kita TAK guna e.preventDefault() supaya form boleh dihantar ke Formspree
+        });
+    </script>
+
+    <!-- SCRIPT ASAL KAU -->
+    <script src="script.js"></script>
+</body>
+</html>

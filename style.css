@@ -1,0 +1,708 @@
+/* =========================================
+   1. ASAS & FONT
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #ECF0F1; /* Warna Off-White dari palette kau */
+    color: #2C3E50; /* Teks utama Dark Navy */
+    line-height: 1.6;
+}
+
+/* =========================================
+   2. NAVIGATION BAR (Navbar)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50; /* Dark Navy */
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #BDC3C7; /* Light Grey */
+    font-weight: normal;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: #ECF0F1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #BDC3C7; /* Light Grey hover */
+}
+
+.theme-btn {
+    background-color: rgba(255, 255, 255, 0.1); /* Efek kaca sikit */
+    color: #ECF0F1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak antara icon dan teks */
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+/* =========================================
+   3. HERO SECTION (Muka Depan / Home)
+   ========================================= */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 50px;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 42px;
+    color: #2C3E50; /* Dark Navy */
+    margin-bottom: 10px;
+}
+
+.hero-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-text h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #34495E; /* Dark Slate Blue */
+}
+
+.hero-text p {
+    margin-bottom: 30px;
+    color: #7F8C8D; /* Muted Grey */
+}
+
+/* =========================================
+   4. BUTANG (Buttons)
+   ========================================= */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #34495E;
+}
+
+.btn-secondary {
+    background-color: #BDC3C7;
+    color: #2C3E50;
+}
+
+.btn-secondary:hover {
+    background-color: #7F8C8D;
+    color: white;
+}
+
+/* =========================================
+   5. GAMBAR PROFILE BULAT
+   ========================================= */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 8px solid #2C3E50; /* Border Dark Navy */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* =========================================
+   6. PROJECTS SECTION (Page Projek)
+   ========================================= */
+.projects-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 40px;
+    font-size: 36px;
+}
+
+.project-card {
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
+    border-top: 5px solid #2C3E50; /* Border atas Dark Navy */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    flex: 1;
+    min-width: 300px;
+    background-color: #BDC3C7;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    flex: 2;
+    padding: 30px;
+}
+
+.project-info h2 {
+    color: #2C3E50;
+    margin-bottom: 15px;
+}
+
+.project-info p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    color: #7F8C8D;
+}
+
+.project-info strong {
+    color: #34495E;
+}
+
+/* =========================================
+   7. RESPONSIVE (Untuk Mobile)
+   ========================================= */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        margin: 40px auto;
+        padding: 0 20px;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+}
+
+/* =========================================
+   8. ABOUT ME SECTION
+   ========================================= */
+.about-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.about-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #2C3E50; /* Dark Navy border */
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+.sub-title {
+    color: #2C3E50;
+    margin-bottom: 20px;
+    font-size: 26px;
+    border-bottom: 2px solid #BDC3C7;
+    padding-bottom: 10px;
+}
+
+/* Timeline styling */
+.timeline {
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    background-color: #ffffff;
+    padding: 20px 25px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid #34495E; /* Slate Blue border */
+}
+
+.timeline-item h3 {
+    color: #2C3E50;
+    font-size: 20px;
+}
+
+.timeline-item h4 {
+    color: #7F8C8D;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+    color: #475569;
+}
+
+.timeline-item ul li {
+    margin-bottom: 5px;
+}
+
+/* =========================================
+   9. SKILLS SECTION
+   ========================================= */
+.skills-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.skill-tag {
+    background-color: #2C3E50; /* Dark Navy */
+    color: #ECF0F1;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 500;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background-color: #34495E;
+    transform: translateY(-2px);
+}
+
+.skill-tag.soft {
+    background-color: #BDC3C7; /* Grey untuk soft skills */
+    color: #2C3E50;
+}
+
+.skill-tag.soft:hover {
+    background-color: #7F8C8D;
+    color: white;
+}
+
+.cert-list {
+    background-color: #ffffff;
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #2C3E50;
+    color: #475569;
+    margin-bottom: 40px;
+}
+
+.cert-list li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* =========================================
+   10. CONTACT SECTION (UPGRADED VERSION)
+   ========================================= */
+.contact-section {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-desc {
+    color: #7F8C8D;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-container {
+    display: flex;
+    gap: 0;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* --- KOTAK FORM (KIRI) --- */
+.contact-form-wrapper {
+    flex: 1.5;
+    padding: 40px;
+    background-color: #ffffff;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.contact-form .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2C3E50;
+    font-size: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #ECF0F1;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #34495E;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(52, 73, 94, 0.1);
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.btn-block {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* --- KOTAK INFO (KANAN) --- */
+.direct-links {
+    flex: 1;
+    background-color: #2C3E50;
+    padding: 40px;
+    color: #ffffff;
+}
+
+.direct-links h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.direct-links p {
+    color: #BDC3C7;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.info-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.info-item .icon {
+    font-size: 20px;
+    background-color: #34495E;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.info-item strong {
+    color: #ECF0F1;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.info-item a, .info-item div {
+    color: #BDC3C7;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 1.5;
+    word-break: break-all;
+}
+
+.info-item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Responsive Contact untuk Mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .contact-form-wrapper, .direct-links {
+        padding: 30px;
+    }
+}
+/* =========================================
+   11. CERTIFICATIONS SECTION (Skills Page)
+   ========================================= */
+.cert-list {
+    background-color: #ffffff;
+    padding: 10px 30px; /* Kurangkan padding atas/bawah sikit */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-left: 5px solid #2C3E50;
+    margin-bottom: 40px;
+}
+
+.cert-item {
+    display: flex;
+    justify-content: space-between; /* Ni yang buat teks kiri, butang kanan */
+    align-items: center;
+    padding: 18px 0;
+    border-bottom: 1px solid #ECF0F1; /* Garisan pemisah kelabu lembut */
+    color: #2C3E50;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Buang garisan bawah untuk item yang paling last sekali */
+.cert-item:last-child {
+    border-bottom: none;
+}
+
+/* Style untuk butang View */
+.cert-link {
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Supaya butang tak pecah dua baris */
+}
+
+.cert-link:hover {
+    background-color: #2C3E50;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(44, 62, 80, 0.2);
+}
+
+/* Responsive untuk Mobile: Kalau skrin kecil, butang turun ke bawah teks */
+@media (max-width: 768px) {
+    .cert-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    
+    .cert-link {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* =========================================
+   12. DARK MODE STYLING
+   ========================================= */
+body.dark-mode {
+    background-color: #1a202c; /* Latar belakang gelap */
+    color: #e2e8f0;
+}
+
+body.dark-mode .navbar {
+    background-color: #2d3748;
+}
+
+body.dark-mode .about-content,
+body.dark-mode .timeline-item,
+body.dark-mode .project-card,
+body.dark-mode .contact-container,
+body.dark-mode .contact-form-wrapper,
+body.dark-mode .cert-list {
+    background-color: #2d3748; /* Kotak jadi warna gelap slate */
+    color: #e2e8f0;
+}
+
+body.dark-mode .section-title,
+body.dark-mode .sub-title,
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4,
+body.dark-mode .project-info h2,
+body.dark-mode .contact-form label {
+    color: #f8fafc; /* Teks putih cerah */
+}
+
+body.dark-mode .hero-text p,
+body.dark-mode .project-info p,
+body.dark-mode .cert-item,
+body.dark-mode .contact-desc {
+    color: #cbd5e1; /* Teks kelabu cerah */
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background-color: #1a202c;
+    border-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+body.dark-mode .skill-tag.soft {
+    background-color: #4a5568;
+    color: #e2e8f0;
+}
+
+/* =========================================
+   13. SCROLL TO TOP BUTTON
+   ========================================= */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #2C3E50;
+    color: white;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 50%; /* Bulat */
+    font-size: 20px;
+    display: none; /* Sorok secara default */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #34495E;
+    transform: translateY(-3px);
+}

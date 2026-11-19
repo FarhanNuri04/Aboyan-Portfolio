@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Farhan Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Farhan<span>.Dev</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button id="themeToggleBtn" class="theme-btn">🌙 Dark Mode</button>
+    </nav>
+
+    <!-- PROJECTS SECTION -->
+    <section class="projects-section">
+        <h1 class="section-title">My Engineering Projects</h1>
+
+        <!-- PROJECT 1: Raspberry Pi Kit -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/plc.jpg" alt="Raspberry Pi Educational Kit">
+            </div>
+            <div class="project-info">
+                <h2>Raspberry Pi Automation Demonstration Kit</h2>
+                <p><strong>Project:</strong> Ready-to-use Educational Hardware Kit</p>
+                <p><strong>Problem Statement:</strong> Students and lecturers often face difficulties with complex wiring when setting up hardware for IoT or automation demonstrations. A plug-and-play solution is needed.</p>
+                <p><strong>Role:</strong> Hardware Developer & System Integrator</p>
+                <p><strong>Tools Used:</strong> Raspberry Pi, 4-Channel Relay Module, Power Supply Unit (PSU), Custom Plastic Enclosure, I/O Connectors.</p>
+                <p><strong>Outcome:</strong> Successfully developed a compact, portable kit. Users only need to connect their desired sensors to the input connectors, write their code, and the system is ready to use—eliminating complex wiring.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 2: Soap Manufacturing PLC -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/plc2.jpg" alt="Soap Manufacturing PLC System">
+            </div>
+            <div class="project-info">
+                <h2>Automated Soap Manufacturing System</h2>
+                <p><strong>Project:</strong> Industrial Collaboration (Joy Venture)</p>
+                <p><strong>Problem Statement:</strong> Manual handling and transferring of raw liquid chemical materials between machines are inefficient, hazardous, and prone to spillage.</p>
+                <p><strong>Role:</strong> PLC Programmer & System Integrator (Team Project)</p>
+                <p><strong>Tools Used:</strong> Industrial PLC Controller, Sensors, Actuators, Motor Controls, Vendor Integration.</p>
+                <p><strong>Outcome:</strong> Successfully automated the transfer process of raw materials across multiple machines. The system ensures precise control, improves safety, and maintains consistent production output.</p>
+            </div>
+        </div>
+
+        <!-- PROJECT 3: OMRON Robot Integration (UPDATED) -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/robot.jpg" alt="OMRON Robot Pick and Place">
+            </div>
+            <div class="project-info">
+                <h2>OMRON Robot & PLC Synchronization</h2>
+                <p><strong>Project:</strong> Automated Pick & Place Material Handling</p>
+                <p><strong>Problem Statement:</strong> Manual material handling creates a bottleneck and slows down the conveyor line. Tight synchronization between hardware is required to eliminate human error.</p>
+                <p><strong>Role:</strong> PLC Programmer & Robot Integrator</p>
+                <p><strong>Tools Used:</strong> OMRON Robot, <strong>TMflow (Robot Programming)</strong>, PLC, Conveyor System, Photoelectric Sensors, Pneumatic Gates.</p>
+                <p><strong>Outcome:</strong> Achieved seamless bi-directional PLC-Robot handshaking. The PLC controls the conveyor and gates based on sensor inputs. Once the item reaches the robot station, the PLC sends a trigger signal to the robot. Using TMflow, the robot executes the pick-and-place sequence and sends an acknowledgment signal back to the PLC to resume the conveyor cycle.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
